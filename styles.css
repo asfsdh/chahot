@@ -1,0 +1,249 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 导航菜单 */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: #0073b1;
+    padding: 10px;
+}
+
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-header {
+    text-align: center;
+    border-bottom: 2px solid #0073b1;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.top-header h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    border-right: 2px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 210px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 2px solid #0073b1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar-info {
+    text-align: left;
+    color: #555;
+    width: 100%;
+}
+
+.sidebar-info p {
+    margin-bottom: 10px;
+}
+
+.contact-links a {
+    color: #0073b1;
+    text-decoration: none;
+    font-size: 0.95em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.about h2, .publications h2, .experience h2, .awards h2 {
+    font-size: 1.8em;
+    color: #333;
+    border-bottom: 2px solid #0073b1;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+/* 导航按钮样式 */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.navigation button {
+    padding: 10px;
+    background-color: #0073b1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navigation button:hover {
+    background-color: #005b8a;
+}
+
+/* 隐藏未选中的内容区域 */
+.section-content {
+    display: none;
+}
+
+/* 按钮样式 */
+.contact-links .button {
+    display: inline-block;
+    width: 100%; /* 按钮填满整个宽度 */
+    padding: 10px 15px;
+    margin: 5px 0;
+    text-align: center;
+    background-color: #0073b1; /* 按钮背景色 */
+    color: #ffffff; /* 按钮文字颜色 */
+    border-radius: 5px; /* 圆角效果 */
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* 悬停效果 */
+}
+
+.contact-links .button:hover {
+    background-color: #005b8a; /* 悬停时的颜色 */
+}
+
+/* Info Box 样式 */
+.info-box {
+    padding: 15px;
+    background-color: #f0f8ff; /* 浅蓝色背景 */
+    border: 1px solid #0073b1; /* 蓝色边框 */
+    border-radius: 8px; /* 圆角 */
+    margin-top: 20px;
+}
+
+.info-box p {
+    margin: 5px 0; /* 段落之间的间距 */
+    color: #333;
+    font-weight: normal;
+}
+
+.info-box p strong {
+    color: #0073b1; /* 加粗标题颜色 */
+}
+
+/* Info Box 样式 */
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: #f0f8ff;
+    border: 1px solid #0073b1;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.info-box .info-image {
+    width: 100%; /* 确保图片填满父容器宽度 */
+    max-width: 200px; /* 控制图片最大宽度 */
+    border-radius: 5px; /* 使图片具有轻微的圆角 */
+    border: 1px solid #0073b1;
+}
+/* Document Links 按钮样式 */
+.document-links {
+    display: flex;
+    flex-wrap: wrap; /* 使按钮自动换行 */
+    gap: 2px; /* 按钮之间的间距 */
+    margin-top: 5px;
+}
+
+.doc-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #0073b1; /* 按钮背景色 */
+    color: #ffffff; /* 按钮文字颜色 */
+    border-radius: 5px; /* 圆角效果 */
+    text-decoration: none; /* 移除下划线 */
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease; /* 悬停效果 */
+}
+
+.doc-button:hover {
+    background-color: #005b8a; /* 悬停时的颜色 */
+}
+/* Document Table 样式 */
+.document-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.document-table td {
+    padding: 10px;
+    background-color: #f0f8ff;
+    border: 1px solid #0073b1;
+    text-align: center;
+}
+
+.document-table a {
+    color: #0073b1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.document-table a:hover {
+    text-decoration: underline;
+}
