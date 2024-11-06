@@ -247,3 +247,43 @@ body {
 .document-table a:hover {
     text-decoration: underline;
 }
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #f0f0f0;
+        margin-bottom: 20px;
+    }
+    
+    .main-content {
+        width: 100%;
+    }
+
+    .navigation {
+        flex-direction: row;
+        gap: 5px;
+        justify-content: center;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 120px;
+    }
+    
+    .navigation button {
+        width: auto; /* 让按钮自适应内容 */
+    }
+}
+.container {
+    max-width: 100%;
+    padding: 10px;
+}
+.profile-pic img, .info-image {
+    max-width: 100%;
+    height: auto;
+}
