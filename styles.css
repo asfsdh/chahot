@@ -12,23 +12,37 @@ body {
     line-height: 1.6;
 }
 
-/* 导航菜单 */
-.navigation {
+/* Orange sidebar navigation */
+.sidebar .navigation {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    background-color: #0073b1;
-    padding: 10px;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 20px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #f58220;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-.navigation a {
-    color: #ffffff;
-    text-decoration: none;
+.sidebar .navigation button {
+    width: 100%;
+    padding: 14px 10px;
+    background-color: #f58220;
+    color: #3b3f75;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 0;
+    cursor: pointer;
     font-weight: bold;
 }
 
-.navigation a:hover {
-    text-decoration: underline;
+.sidebar .navigation button:last-child {
+    border-bottom: none;
+}
+
+.sidebar .navigation button:hover {
+    background-color: #d96f18;
 }
 
 .container {
