@@ -201,6 +201,27 @@ body {
 .section-display-area ul {
     padding-left: 21px;
 }
+/* Contact buttons - NTU red style */
+.contact-links .button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 5px 0;
+    text-align: center;
+    background-color: #b00020; /* NTU-style deep red */
+    color: #ffffff;
+    border: 1px solid #8a0018;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-links .button:hover {
+    background-color: #8a0018;
+    border-color: #6f0013;
+    text-decoration: none;
+}
 
 /* Media Query - Mobile */
 @media (max-width: 768px) {
