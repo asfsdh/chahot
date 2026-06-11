@@ -248,11 +248,14 @@ body {
     }
     .section-table tr {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     }
 
     .section-table td {
-        width: 100%;
+        width: 33.333%;
+        display: table-cell; /* 横向排列 */
+        padding: 6px;
+        font-size: 0.9em;
         border-bottom: 1px solid rgba(255, 255, 255, 0.75);
     }
 
