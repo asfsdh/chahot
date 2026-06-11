@@ -11,40 +11,6 @@ body {
     color: #333;
     line-height: 1.6;
 }
-
-/* Orange sidebar navigation */
-.sidebar .navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-top: 20px;
-    width: 100%;
-    background-color: transparent;
-    border: 1px solid #f58220;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.sidebar .navigation button {
-    width: 100%;
-    padding: 14px 10px;
-    background-color: #f58220;
-    color: #3b3f75;
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.75);
-    border-radius: 0;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.sidebar .navigation button:last-child {
-    border-bottom: none;
-}
-
-.sidebar .navigation button:hover {
-    background-color: #d96f18;
-}
-
 .container {
     max-width: 1000px;
     margin: 40px auto;
@@ -131,27 +97,7 @@ body {
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
-/* 导航按钮样式 */
-.navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-}
 
-.navigation button {
-    padding: 10px;
-    background-color: #0073b1;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.navigation button:hover {
-    background-color: #005b8a;
-}
 
 /* 隐藏未选中的内容区域 */
 .section-content {
@@ -241,11 +187,13 @@ body {
 /* Document Table 样式 */
 .document-table {
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
     margin-top: 15px;
 }
 
 .document-table td {
+    width: 33.333%;
     padding: 10px;
     background-color: #f0f8ff;
     border: 1px solid #0073b1;
@@ -257,6 +205,7 @@ body {
     text-decoration: none;
     font-weight: bold;
 }
+
 
 .document-table a:hover {
     text-decoration: underline;
@@ -297,6 +246,22 @@ body {
     .info-box .info-image {
         max-width: 220px;
     }
+    .section-table tr {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .section-table td {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+    }
+
+    .section-table td:last-child {
+        border-bottom: none;
+    }
+    .section-display-area ul {
+        padding-left: 21px;  
+    }
 }
 .container {
     max-width: 100%;
@@ -305,4 +270,54 @@ body {
 .profile-pic img, .info-image {
     max-width: 100%;
     height: auto;
+}
+/* Orange section selector table: same layout as document-table */
+/* Section selector table with light orange background and darker orange text */
+.section-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4px;
+    margin-bottom: 14px;
+}
+
+.section-table td {
+    width: 33.333%;
+    padding: 10px;
+    background-color: #ffe5cc; /* 淡橙色底 */
+    border: 2px solid #ff8c42; /* 边框明显 */
+    text-align: center;
+    color: #d35400; /* 深橙色文字 */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.section-table td:hover {
+    background-color: #ffd699; /* hover时稍微加深 */
+}
+
+.section-table td.active-section-tab {
+    background-color: #ffb366; /* 激活状态加深底色 */
+    color: #d35400; /* 保持文字深橙色 */
+}
+
+.section-display-area {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.section-display-area .section-content {
+    display: none;
+}
+
+.section-display-area h2 {
+    font-size: 1.8em;
+    color: #333;
+    border-bottom: 2px solid #0073b1;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+/* 让显示区所有列表点整体右移 */
+.section-display-area ul {
+    padding-left: 21px;  /* 可以根据需要调整，比如 40px */
 }

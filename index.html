@@ -41,13 +41,7 @@
                         <a target="_blank" class="button" href="https://scholar.google.com/citations?user=m0cht2sAAAAJ&hl=en&oi=ao">Google Scholar</a><br>
                         <a target="_blank" class="button" href="https://sg.linkedin.com/in/haotian-chen-2b3517334">LinkedIn</a>
                     </div>
-                </div>
-                <!-- 导航按钮 -->
-                <nav class="navigation">
-                    <button onclick="showSection('publications')">Publications</button>
-                    <button onclick="showSection('experience')">Professional Experience</button>
-                    <button onclick="showSection('awards')">Awards and Recognitions</button>
-                </nav>
+                </div>                
             </aside>
 
             <!-- 右侧内容区域 -->
@@ -64,62 +58,105 @@
                 <p><b>Documents you may interested in: </b></p>
                 <table class="document-table">
                     <tr>
-                        <td><a target="_blank" href="cv.pdf">CV</a></td>
-                        <td><a target="_blank" href="award.pdf">Awards</a></td>
-                        <td><a target="_blank" href="contract.pdf">Book</a></td>
+                        <td><a target="_blank" href="cv.pdf">Curriculum Vitae</a></td>
+                        <td><a target="_blank" href="award.pdf">Academic Awards</a></td>
+                        <td><a target="_blank" href="contract.pdf">My Textbook</a></td>
                     </tr>
                 </table>
-                <hr>
-                <hr>
+                <p><b>Sections of My Professional Portfolio: </b></p>
+                <table class="section-table">
+                    <tr>
+                        <td onclick="showSection('publications')">Research Publications</td>
+                        <td onclick="showSection('experience')">Professional Experience</td>
+                        <td onclick="showSection('awards')">Honors & Recognitions</td>
+                    </tr>
+                </table>
+                
+                <div class="section-display-area">
+                    <section id="publications" class="section-content" style="display: none;">
+                        <h2>Research Publications</h2>
+                            <h3>Journal Articles</h3>
+                            <ul>
+                                <li>Leveraging Application Permissions for Android Ransomware Detection: Deep Reinforcement Learning Approach. <strong>Journal of Network and Computer Applications</strong>, 2024. (Funded by NRF - RS-2023-00267476) <a target="_blank" href="https://doi.org/10.1016/j.jnca.2024.103950">[Link]</a></li>
+                                <li>A Comprehensive Study of Quantum Computing Technologies in Smart City: Review and Future Directions. <strong>Human-centric Computing and Information Sciences</strong>, 2024. (Funded by NRF - RS-2023-00267476) <a target="_blank" href="https://doi.org/10.22967/HCIS.2024.14.064">[Link]</a></li>
+                                <li>A Digital Twin-Based Heuristic Multi-Cooperation Scheduling Framework for Smart Manufacturing in IIoT Environment. <strong>Applied Sciences</strong>, 2023. (Funded by NRF-2019M3F2A1073386) <a target="_blank" href="https://doi.org/10.3390/app13031440">[Link]</a></li>
+                                <li>A Novel Smart Contract Based Optimized Cloud Selection Framework for Efficient Multi-Party Computation. <strong>Journal of Information Processing Systems</strong>, 2023. <a target="_blank" href="https://doi.org/10.3745/JIPS.03.0184">[Link]</a></li>
+                                <li>Blockchain-Based Distributed Information Hiding Framework for Data Privacy Preserving in Medical Supply Chain Systems. <strong>Sensors</strong>, 2022. (Funded by NRF-019R1A2B5B01074613 & UD210029TD) <a target="_blank" href="https://doi.org/10.3390/s22041371">[Link]</a></li>
+                            </ul>
 
-                <section id="publications" class="section-content" style="display: none;">
-                    <h2>Publications</h2>
-                    <ul>
-                        <li><strong>Leveraging Application Permissions for Android Ransomware Detection: Deep Reinforcement Learning Approach</strong>. Journal of Network and Computer Applications, 2024. (Funded by NRF - RS-2023-00267476) <a target="_blank" href="https://doi.org/10.1016/j.jnca.2024.103950">[Link]</a></li>
-                        <li><strong>A Digital Twin-Based Heuristic Multi-Cooperation Scheduling Framework for Smart Manufacturing in IIoT Environment</strong>. Applied Sciences, 2023. (Funded by NRF-2019M3F2A1073386) <a target="_blank" href="https://doi.org/10.3390/app13031440">[Link]</a></li>
-                        <li><strong>A Novel Smart Contract Based Optimized Cloud Selection Framework for Efficient Multi-Party Computation</strong>. Journal of Information Processing Systems, 2023. <a target="_blank" href="https://doi.org/10.3745/JIPS.03.0184">[Link]</a></li>
-                        <li><strong>Blockchain-Based Distributed Information Hiding Framework for Data Privacy Preserving in Medical Supply Chain Systems</strong>. Sensors, 2022. (Funded by NRF-019R1A2B5B01074613 & UD210029TD) <a target="_blank" href="https://doi.org/10.3390/s22041371">[Link]</a></li>
-                        <li><strong>A Comprehensive Study of Quantum Computing Technologies in Smart City: Review and Future Directions</strong>. Human-centric Computing and Information Sciences, 2024. (Funded by NRF - RS-2023-00267476) <a target="_blank" href="https://doi.org/10.22967/HCIS.2024.14.064">[Link]</a></li>
-                    </ul>
-                </section>
-<!-- Professional Experience Section -->
-                <section id="experience" class="section-content" style="display: none;">
-                    <h2>Professional Experience</h2>
-                    <p><b>Technical Blog Experience</b> (2019 - Present) at Alibaba Cloud Developer Community and CSDN, China. Subscriptions exceed 20,000, with total visits around 600,000. (Access Link: <a target="_blank" href="https://chahot.blog.csdn.net/">here</a>)</p>
+                            <h3>Conference Proceedings</h3>
+                            <ul>
+                                <li>Quantum-Powered Secure Multi-Party Collaboration Framework for Smart Manufacturing. <strong>Proceedings of the International Conference on Big Data, IoT, and Cloud Computing (BIC)</strong>, Jeju, Korea, 2023.</li>
+                                <li>QAOA: A Quantum Approximate Optimization Algorithm for Optimal Base Station Selection in 6G Networks and Beyond. <strong>Proceedings of the International Conference on Computer Science and its Applications (CSA)</strong>, National University of Laos, Laos, 2022.</li>
+                                <li>Smart Contract-Based Secure Multi-Party Computation for Cloud Privacy Preserving. <strong>Proceedings of the World Congress on Information Technology Applications and Services (World IT Congress)</strong>, Jeju, Korea, 2022.</li>
+                                <li>BDT: Blockchain and Digital Twins-Based Secure Framework for Efficient Data Processing in Smart Manufacturing. <strong>Proceedings of the International Conference on Big Data, IoT, and Cloud Computing (BIC)</strong>, Jeju, Korea, 2022.</li>
+                                <li>Quantum Homomorphic Cryptography-Based Efficient Medical Imaging Architecture for IoMT in Smart City Environments. <strong>Proceedings of the International Conference on Future Information Technology, Applications and Services (IFIT)</strong>, Seoul, Korea, 2022.</li>
+                            </ul>
+                            <!--
+                            <h3>Preprints</h3>
+                            <ul>
+                                
+                                <li>Leveraging Application Permissions for Android Ransomware Detection: Deep Reinforcement Learning Approach. <strong>Journal of Network and Computer Applications</strong>, 2024. (Funded by NRF - RS-2023-00267476) <a target="_blank" href="https://doi.org/10.1016/j.jnca.2024.103950">[Link]</a></li>
+                            
+                            </ul> -->
+                        </section>
+
+                    <section id="experience" class="section-content" style="display: none;">
+                        <h2>Professional Experience</h2>
+                        <p><b>Invited Talks</b></p>
+                        <ul>
+                            <li>“IBM Quantum-based Quantum Programming: Qiskit” invited online seminar at <a target="_blank" href="https://ucs.seoultech.ac.kr/">Ubiquitous Computing and Security Laboratory</a>, Seoul National University of Science and Technology, December 2024. [<a target="_blank" href="Slides000.pdf">Slides</a></a>]</li>
+                            <li>"Quantum Communication: Security of QKD", invited on-site seminar at <a target="_blank" href="https://ucloud-lab.dongguk.edu/index.html">uCloud Computing Lab</a>, Dongguk University, February 2023.[<a target="_blank" href="Notes000.pdf">Notes</a></a>]</li>
+                        </ul>
+                        <p><b>Technical Blog Experience</b> (2019 - Present) at Alibaba Cloud Developer Community and CSDN, China. Subscriptions exceed 20,000, with total visits around 800,000. (Access Link: <a target="_blank" href="https://chahot.blog.csdn.net/">here</a>)</p>
                         <ul>
                             <li><u><i>Alibaba Cloud Developer Community - Blogging Expert</i></u>: Since May, 2023</li>
                             <li><u><i>CSDN - Blogging Expert</i></u>: Since March, 2023</li>
                             <li><u><i>CSDN - Quality Creator in the Field of Cybersecurity</i></u>: Since June, 2022</li>
                         </ul>
-                    <p><b>Examiner</b> for the security section of the Korean Information Processing Technology Professional Certification Examination.</p>
-                    <p><b>Book Publication</b> <strong>Quantum Security: A New Era in Information Protection</strong>. Published with PHEI (Publishing House of Electronics Industry, the 4th-ranked publisher in the field of Chinese technology books), July 2024.</p>
-                </section>
+                        <p><b>Examiner Experience:</b> Examiner for the SECURITY section of the Korean Information Processing Technology Professional Certification Examination.</p>
+                        <p><b>Academic Review Experience:</b> Served as reviewer for multiple journals and conferences in computer science, electrical engineering, and IoT security.</p>
+                        <p><b>Academic Editorial Experience:</b>Managed administrative workflow for manuscript submissions and APC processing for HCIS journal; assisted editorial team in tracking submissions and correspondence (no academic review responsibility).</p>
+                        <p><b>Book Publication Experience:</b> Published with PHEI (Publishing House of Electronics Industry, the 4th-ranked publisher in the field of Chinese technology books), July 2024.</p>
+                    </section>
 
-<!-- Awards and Recognitions Section -->
-                <section id="awards" class="section-content" style="display: none;">
-                    <h2>Awards and Recognitions</h2>
-                    <p><b>Scholarships</b></p>
+                    <section id="awards" class="section-content" style="display: none;">
+                        <h2>Honors & Recognitions</h2>
+                        <p><b>Scholarships</b></p>
                         <ul>
                             <li>Nominated for the National Quantum Scholarship by Nanyang Technological University</li>
                             <li>Received the university's "Scholarship for Outstanding Achievement for Foreigners" each semester of my undergraduate studies (4 full scholarships and 4 half scholarships).</li>
                             <li>Received the university's "Scholarship for Outstanding Achievement for Foreigners" each semester of my graduate studies (75% scholarships).</li>
                             <li>Received multiple Teaching Assistantships, Conference Grants, and Journal Publication Incentives.</li>
                         </ul>
-                    <p><b>Best Paper Award in International Conference</b></p>
+                        <p><b>Best Paper Award in International Conference</b></p>
                         <ul>
-                            <li>The 2022 World Congress on Information Technology Applications and Services, Jeju, Korea, 2022 (WITC 2022)</li>
-                            <li>The International Conference on Big Data, IoT, and Cloud Computing, Jeju, Korea, 2022 (BIC 2022)</li>
-                            <li>The International Conference on Future Information Technology, applications and services (IFIT 2022)</li>
-                            <li>The 14th International Conference on Computer Science and its Applications (CSA 2022)</li>
-                            <li>The International Conference on Big data, IoT, and Cloud Computing (BIC 2023)</li>
+                            <li>The 2022 <a target="_blank" href="https://www.worlditcongress.org/2022/">World Congress on Information Technology Applications and Services</a>, Jeju, Korea, 2022 (WITC 2022)</li>
+                            <li>The <a target="_blank" href="https://bic-conference.org/2022/">International Conference on Big Data, IoT, and Cloud Computing</a>, Jeju, Korea, 2022 (BIC 2022)</li>
+                            <li>The <a target="_blank" href="https://ifit-conference.org/2022/">International Conference on Future Information Technology, Applications and Services</a> (IFIT 2022)</li>
+                            <li>The 14th <a target="_blank" href="https://csa-conference.org/2022/">International Conference on Computer Science and its Applications</a> (CSA 2022)</li>
                         </ul>
-                    <p><b>Recognitions in Technical Blog</b></p>
+                        <p><b>Recognitions in Technical Blog</b></p>
                         <ul>
                             <li>Alibaba Cloud Developer Community - Blogging Expert: Since May, 2023</li>
                             <li>CSDN - Blogging Expert: Since March, 2023</li>
                         </ul>
-                </section>
-
+                        <p><b>Reviewer</b></p>
+                        <ul>
+                            <li>Reviewer for <a target="_blank" href="https://www.sciencedirect.com/journal/computers-and-electrical-engineering">Computers and Electrical Engineering</a>, Elsevier</li>
+                        </ul>
+                        <p><b>Editorial / Program Committee Roles</b></p>
+                        <ul>
+                            <li>Editorial Assistant (Journal Operations) – <a target="_blank" href="https://hcisj.com/">Human-centric Computing and Information Sciences</a>, 2023</li>
+                        </ul>
+                        <p><b>Language Proficiency</b></p>
+                        <ul>
+                            <li>English: IELTS Overall 7.0 (Reading 6.0, Listening 6.5, Writing 7.5, Speaking 7.0)</li>
+                            <li>Korean: TOPIK Overall 243/300 (Listening 84/100, Writing 65/100, Reading 94/100), Level 6 (Highest Level) </li>
+                            <li>Chinese: Native </li>
+                        </ul>
+                    </section>
+                </div>
             </main>
         </div>
     </div>
