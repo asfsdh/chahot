@@ -66,7 +66,7 @@ body {
 
 .sidebar-info {
     text-align: left;
-    color: #555;
+    color: #150624;
     width: 100%;
 }
 
@@ -272,4 +272,17 @@ body {
     .section-display-area ul {
         padding-left: 21px;
     }
+}
+.contact-links .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.contact-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
 }
