@@ -6,12 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haotian Chen | Research Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Local styles for the expandable Notes link, preserving the existing theme. */
+        .document-table .notes-trigger {
+            display: block;
+            width: 100%;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: #0077b5;
+            font: inherit;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+        .document-table .notes-trigger:hover { text-decoration: underline; }
+        .document-table .notes-trigger:focus-visible { outline: 2px solid #0077b5; outline-offset: 3px; }
+        .notes-panel {
+            margin: 10px 0 16px;
+            padding: 14px 20px;
+            border: 1px solid #a8cde8;
+            background-color: #f5faff;
+        }
+        .notes-panel[hidden] { display: none; }
+        .notes-panel h3 { margin-top: 0; margin-bottom: 10px; }
+        .notes-panel ul { margin-top: 0; margin-bottom: 0; padding-left: 22px; }
+        .notes-panel li { margin: 7px 0; }
+    </style>
 </head>
 <body>
     <div class="container">
         <!-- 顶部区域 -->
         <header class="top-header">
-            <h1>Quantum Computing · Computational Complexity · Cryptography</h1>
+            <h1>Quantum Computing · Theoretical Computer Science</h1>
         </header>
 
         <div class="content">
@@ -60,35 +87,61 @@
             <main class="main-content">
                 <section class="about" class="section-content">
                 <h2>About Me </h2>
-      I am currently pursuing a Master of Engineering (by Research) at <a target="_blank" href="https://www.ntu.edu.sg/" style="color:#FF8C00;">Nanyang Technological University</a>,
-within the <a target="_blank" href="https://www.ntu.edu.sg/computing" style="color:#41972e;">College of Computing and Data Science (CCDS)</a>,
-under the supervision of <a target="_blank" href="https://sites.google.com/view/pduttashomepage" style="color:#0851e4;">Prof. Pranjal Dutta</a>.
+      
+<p>
+    I am currently pursuing a Master of Engineering (by Research) at
+    <a target="_blank" href="https://www.ntu.edu.sg/" style="color:#FF8C00;">Nanyang Technological University</a>,
+    within the
+    <a target="_blank" href="https://www.ntu.edu.sg/computing" style="color:#41972e;">College of Computing and Data Science (CCDS)</a>,
+    under the supervision of
+    <a target="_blank" href="https://sites.google.com/view/pduttashomepage" style="color:#0851e4;">Prof. Pranjal Dutta</a>.
+    
+My research interests lie at the intersection of quantum computing and theoretical computer science, particularly quantum learning theory, Fourier analysis of Boolean functions and finite Abelian groups,computational complexity, and property testing. My current research focuses on quantum exact learning of Boolean functions using quantum Fourier sampling.
 
-My research interests lie at the intersection of quantum computing and theoretical computer science, with a particular focus on quantum learning, Fourier analysis of Boolean functions, computational complexity, and property testing. I am currently studying learning and testing problems under quantum-example access and Fourier sampling, including the use of Fourier samples to test approximate concentration of the Fourier spectrum of Boolean functions.<br>
 
-Before joining NTU CCDS, I was a Research Assistant at the <a target="_blank" href="https://www.quantumlah.org/" style="color:#41972e;">Centre for Quantum Technologies (CQT)</a>
-at the <a target="_blank" href="https://www.nus.edu.sg/" style="color:#FF8C00;">National University of Singapore</a>,
-under the mentorship of <a target="_blank" href="https://sites.google.com/site/diveshhomepage/" style="color:#0851e4;">Prof. Divesh Aggarwal</a>.
-My research focused on quantum device authentication and proofs of quantumness.<br>
+</p>
 
-I hold a Bachelor’s degree in Computer Science and Engineering from <a target="_blank" href="https://www.seoultech.ac.kr/" style="color:#FF8C00;">Seoul National University of Science and Technology</a>.
-I previously pursued PhD studies there under the supervision of <a target="_blank" href="http://www.parkjonghyuk.net/" style="color:#0851e4;">Prof. Jong Hyuk Park</a>,
-where I worked on security for IoT systems before transitioning toward quantum computing and theoretical computer science.
+<p>
+    Prior to joining NTU, I was a Research Assistant at the
+    <a target="_blank" href="https://www.quantumlah.org/" style="color:#41972e;">Centre for Quantum Technologies (CQT)</a>,
+    <a target="_blank" href="https://www.nus.edu.sg/" style="color:#FF8C00;">National University of Singapore</a>,
+    where I worked with
+    <a target="_blank" href="https://sites.google.com/site/diveshhomepage/" style="color:#0851e4;">Prof. Divesh Aggarwal</a>
+    on quantum complexity and cryptography.
+
+    Previously, I pursued graduate research at
+    <a target="_blank" href="https://www.seoultech.ac.kr/" style="color:#FF8C00;">Seoul National University of Science and Technology</a>
+    under the supervision of
+    <a target="_blank" href="http://www.parkjonghyuk.net/" style="color:#0851e4;">Prof. Jong Hyuk Park</a>,
+    focusing on security in Internet of Things (IoT) systems before transitioning
+    to quantum computing and theoretical computer science.
+</p> 
 
                 </section>
                 <hr>
-                <p><b>Documents you may interested in: </b></p>
+                <p><b>Documents you may be interested in:</b></p>
                 <table class="document-table">
                     <tr>
-                        <td><a target="_blank" href="cv.pdf">Curriculum Vitae</a></td>
-                        <td><a target="_blank" href="award.pdf">Academic Awards</a></td>
-                        <td><a target="_blank" href="contract.pdf">My Textbook</a></td>
+                        <td><a target="_blank" rel="noopener noreferrer" href="cv.pdf">Curriculum Vitae</a></td>
+                        <td>
+                            <button type="button" class="notes-trigger"
+                                    aria-expanded="false" aria-controls="notes-panel"
+                                    onclick="toggleNotes(this)">Lecture Notes</button>
+                        </td>
                     </tr>
                 </table>
+                <!-- Expandable study notes. PDF files should be uploaded alongside this HTML. -->
+                <section id="notes-panel" class="notes-panel" hidden aria-label="Study Notes">
+                    <h3>Study Notes</h3>
+                    <ul>
+                        <li><a href="QC.pdf" target="_blank" rel="noopener noreferrer">Foundational Quantum Computation</a></li>
+                        <li><a href="QI.pdf" target="_blank" rel="noopener noreferrer">Foundations of Quantum Information</a></li>
+                    </ul>
+                </section>
                 <p><b>Sections of My Professional Portfolio: </b></p>
                 <table class="section-table">
                     <tr>
-                        <td onclick="showSection('publications')">Research Publications</td>
+                        <td onclick="showSection('publications')">Publications</td>
                         <td onclick="showSection('experience')">Professional Experience</td>
                         <td onclick="showSection('awards')">Honours & Recognitions</td>
                     </tr>
@@ -96,8 +149,8 @@ where I worked on security for IoT systems before transitioning toward quantum c
                 
                 <div class="section-display-area">
                     <section id="publications" class="section-content" style="display: none;">
-                        <h2>Research Publications</h2>
-                            <h3>Journal Articles</h3>
+                        <h2>Publications</h2>
+                                                        <h3>Journal Articles</h3>
                             <ul>
                                 <li>Leveraging Application Permissions for Android Ransomware Detection: Deep Reinforcement Learning Approach. <strong>Journal of Network and Computer Applications</strong>, 2024. (Funded by NRF - RS-2023-00267476) <a target="_blank" href="https://doi.org/10.1016/j.jnca.2024.103950">[Link]</a></li>
                                 <li>A Comprehensive Study of Quantum Computing Technologies in Smart City: Review and Future Directions. <strong>Human-centric Computing and Information Sciences</strong>, 2024. (Funded by NRF - RS-2023-00267476) <a target="_blank" href="https://doi.org/10.22967/HCIS.2024.14.064">[Link]</a></li>
@@ -113,6 +166,15 @@ where I worked on security for IoT systems before transitioning toward quantum c
                                 <li>Smart Contract-Based Secure Multi-Party Computation for Cloud Privacy Preserving. <strong>Proceedings of the World Congress on Information Technology Applications and Services (World IT Congress)</strong>, Jeju, Korea, 2022.</li>
                                 <li>BDT: Blockchain and Digital Twins-Based Secure Framework for Efficient Data Processing in Smart Manufacturing. <strong>Proceedings of the International Conference on Big Data, IoT, and Cloud Computing (BIC)</strong>, Jeju, Korea, 2022.</li>
                                 <li>Quantum Homomorphic Cryptography-Based Efficient Medical Imaging Architecture for IoMT in Smart City Environments. <strong>Proceedings of the International Conference on Future Information Technology, Applications and Services (IFIT)</strong>, Seoul, Korea, 2022.</li>
+                            </ul>
+                            <h3>Book</h3>
+                            <ul>
+                                <li>Chahot, <em>Quantum Security: A New Era in Information Protection</em> (in Chinese).
+                                    Beijing, China: Publishing House of Electronics Industry, 2024.
+                                    ISBN: 978-7-121-48136-9.
+                                    <a href="https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=65109"
+                                       target="_blank" rel="noopener noreferrer">[Publisher]</a>
+                                </li>
                             </ul>
                             <!--
                             <h3>Preprints</h3>
@@ -185,5 +247,14 @@ where I worked on security for IoT systems before transitioning toward quantum c
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        // Independent from the existing portfolio-section navigation in script.js.
+        function toggleNotes(button) {
+            const panel = document.getElementById('notes-panel');
+            const shouldOpen = panel.hidden;
+            panel.hidden = !shouldOpen;
+            button.setAttribute('aria-expanded', String(shouldOpen));
+        }
+    </script>
 </body>
 </html>
