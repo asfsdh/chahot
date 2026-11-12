@@ -286,3 +286,25 @@ body {
     fill: currentColor;
     flex-shrink: 0;
 }
+
+/* Document Table - Hover and Active States */
+.document-table td {
+    transition: background-color 0.25s ease,
+                color 0.25s ease;
+}
+
+/* Hover effect */
+.document-table td:hover {
+    background-color: #d6ebff;
+}
+
+/* Selected document tab */
+.document-table td.active-document-tab {
+    background-color: #a9d6f5;
+}
+
+/* Text color when selected */
+.document-table td.active-document-tab a,
+.document-table td.active-document-tab .notes-trigger {
+    color: #005b91;
+}

@@ -122,7 +122,14 @@ My research interests lie at the intersection of quantum computing and theoretic
                 <p><b>Documents you may be interested in:</b></p>
                 <table class="document-table">
                     <tr>
-                        <td><a target="_blank" rel="noopener noreferrer" href="cv.pdf">Curriculum Vitae</a></td>
+
+<td>
+    <a target="_blank" rel="noopener noreferrer"
+       href="cv.pdf"
+       onclick="selectDocument(this)">
+       Curriculum Vitae
+    </a>
+</td>
                         <td>
                             <button type="button" class="notes-trigger"
                                     aria-expanded="false" aria-controls="notes-panel"
@@ -246,15 +253,53 @@ My research interests lie at the intersection of quantum computing and theoretic
             </main>
         </div>
     </div>
+    
     <script src="script.js"></script>
     <script>
         // Independent from the existing portfolio-section navigation in script.js.
-        function toggleNotes(button) {
-            const panel = document.getElementById('notes-panel');
-            const shouldOpen = panel.hidden;
-            panel.hidden = !shouldOpen;
-            button.setAttribute('aria-expanded', String(shouldOpen));
-        }
+        
+function clearDocumentSelection() {
+    document.querySelectorAll('.document-table td')
+        .forEach(td => {
+            td.classList.remove('active-document-tab');
+        });
+}
+
+// Curriculum Vitae selection
+function selectDocument(element) {
+    clearDocumentSelection();
+
+    element.closest('td')
+        .classList.add('active-document-tab');
+
+    // Close the notes panel
+    const panel = document.getElementById('notes-panel');
+    panel.hidden = true;
+
+    const notesButton = document.querySelector('.notes-trigger');
+    notesButton.setAttribute('aria-expanded', 'false');
+}
+
+// Lecture Notes selection
+function toggleNotes(button) {
+    const panel = document.getElementById('notes-panel');
+    const shouldOpen = panel.hidden;
+
+    panel.hidden = !shouldOpen;
+
+    button.setAttribute(
+        'aria-expanded',
+        String(shouldOpen)
+    );
+
+    clearDocumentSelection();
+
+    if (shouldOpen) {
+        button.closest('td')
+            .classList.add('active-document-tab');
+    }
+}
+
     </script>
 </body>
 </html>
